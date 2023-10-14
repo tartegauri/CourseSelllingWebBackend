@@ -4,7 +4,8 @@ const cors = require("cors")
 const client = require("./database/pgres")
 app.use(express.json())
 app.use(cors());
-app.get('/',(res,req)=>{
+
+app.get('/',(req,res)=>{
    res.status(200).json({message:"Server Started"});
 })
 
