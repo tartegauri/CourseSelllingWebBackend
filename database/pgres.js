@@ -19,5 +19,3 @@ const client = new Client(process.env.DB_URL);
   }
 })();
 module.exports = client;
-
-// data base connection onach thevaycha db connection ti end wali line kadhun tak combarr pilllu ata nehemi onach thevacha ahe ka ? ho techya shivay appllication kasa chalel deployment madhe 
