@@ -6,12 +6,12 @@ dotenv.config();
 const client = new Client(process.env.DB_URL);
 /**
  * CREATE TABLE CS_USERS_TABLE (
-    order_id SERIAL PRIMARY KEY,
+    user_id SERIAL PRIMARY KEY,
     username VARCHAR(30) NOT NULL,
     email VARCHAR(150) NOT NULL,
     password VARCHAR(20) NOT NULL,
     picture VARCHAR(255),
-    profession VARCHAR(50)
+    profession VARCHAR(50) NOT NULL
 );
 
  */
@@ -47,7 +47,7 @@ const client = new Client(process.env.DB_URL);
 (async () => {
   await client.connect();
   try {
-    const results = await client.query();
+    const results = await client.query(`SELECT * FROM  CS_USERS_TABLE`);
     console.log(results.rows)
     console.log("Database Connection");
   } catch (err) {
