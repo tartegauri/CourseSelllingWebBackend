@@ -13,7 +13,6 @@ const client = new Client(process.env.DB_URL);
     picture VARCHAR(255),
     profession VARCHAR(50) NOT NULL
 );
-
  */
 /**
  * CREATE TABLE CS_COURSES_TABLE (
@@ -24,7 +23,6 @@ const client = new Client(process.env.DB_URL);
     course_description TEXT NOT NULL,
     course_by VARCHAR(30) NOT NULL
 );
-
  */
 /**
  * CREATE TABLE CS_ORDERS_TABLE (
