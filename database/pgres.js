@@ -8,7 +8,7 @@ const client = new Client(process.env.DB_URL);
 (async () => {
   await client.connect();
   try {
-    const results = await client.query("SELECT * FROM USERS");
+    const results = await client.query("SELECT * FROM CS_USER_TABLE");
     console.log(results.rows)
     console.log("Database Connection");
   } catch (err) {
